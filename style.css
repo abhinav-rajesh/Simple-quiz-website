@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Styles */
+.main {
+    min-height: 100vh;
+    background: url("astronaut-ai-1182023.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-position 1s ease; /* Smooth background motion */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(10px); /* Blur effect for modern look */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.home-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.home-content p {
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.home-content .start-btn {
+    width: 200px;
+    height: 60px;
+    background: #4CAF50;
+    border: 2px solid #ffffff;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.home-content .start-btn:hover {
+    background: #45a049;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Popup Info Styles */
+.popup-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    border-radius: 8px;
+    padding: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    z-index: 101;
+    backdrop-filter: blur(10px); /* Blur effect for modern look */
+}
+
+.popup-info.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-info h2 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-info .info {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.popup-info .info-btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin: 20px;
+    padding: 12px 24px;
+    background: #4CAF50;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.popup-info .info-btn:hover {
+    background: #45a049;
+}
+
+/* Background Motion Effect */
+.main:hover {
+    background-position: center 10%; /* Adjust background-position for motion effect */
+}
